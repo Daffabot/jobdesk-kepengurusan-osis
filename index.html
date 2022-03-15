@@ -55,6 +55,7 @@ table{
 text-align: left;
 width: 100%;
 }
+        #more {display: none;}
 </style> 
  </head> 
  <body> 
@@ -218,7 +219,25 @@ Seksi Bidang Komunikasi/Bahasa, antara lain :<br>
    </div> 
    <div class="footer" align="center"> 
     <font size="4"><h2>SMPN 1 Kalijati - Periode Tahun 2022/2023</h2></font> 
-    <img src="girl.gif" height="50%"> 
+    <span id="dots">...</span><span id="more"> <img src="girl.gif" height="50%"></span></p>
+<button onclick="myFunction()" id="myBtn"></button>
+<script type="text/javascript">
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
    </div> 
   </div> 
   <textarea id="printing-css" style="display:none;">.no-print{display:none}</textarea> 
